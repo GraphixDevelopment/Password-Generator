@@ -1,0 +1,175 @@
+/* Standaard font styling importeren */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Algemene CSS styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5865F2;
+}
+
+.container {
+    width: 450px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Card CSS Styling */
+
+.container h2 {
+    font-weight: 600;
+    font-size: 1.31rem;
+    padding: 1rem 1.75rem;
+    border-bottom: 1px solid #d4dbe5;
+}
+
+.card {
+    margin: 1.25rem 1.75rem;
+}
+
+.card .input-box {
+    position: relative;
+}
+
+/* Input CSS Styling */
+
+.input-box input {
+    width: 100%;
+    height: 53px;
+    color: #000;
+    background: none;
+    font-size: 1.06rem;
+    font-weight: 500;
+    border-radius: 15px;
+    letter-spacing: 1.4px;
+    border: 1px solid #aaa;
+    padding: 0 2.85rem 0 1rem;
+}
+
+.input-box span {
+    position: absolute;
+    right: 13px;
+    cursor: pointer;
+    line-height: 53px;
+    color: #707070;
+}
+
+.input-box span:hover {
+    color: #5865F2 !important;
+}
+
+.card .ww-indicator {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    background: #dfdfdf;
+    margin-top: 0.75rem;
+    border-radius: 25px;
+}
+
+/* Wachtwoord Opties CSS Styling */
+
+.ww-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.ww-indicator#weak::before {
+    width: 20%;
+    background: #ff3d3d;
+}
+
+.ww-indicator#medium::before {
+    width: 50%;
+    background: #ffd000;
+}
+
+.ww-indicator#strong::before {
+    width: 100%;
+    background: #72e256;
+}
+
+.card .ww-lengte {
+    margin: 1.56rem 0 1.25rem;
+}
+
+.ww-lengte .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ww-lengte input {
+    width: 100%;
+    height: 5px;
+}
+
+.ww-instellingen .opties {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.ww-instellingen .opties .optie {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100% / 2);
+}
+
+.opties .optie:first-child {
+    pointer-events: none;
+}
+
+.opties .optie:first-child input {
+    opacity: 0.7;
+}
+
+.opties .optie input {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.opties .optie label {
+    cursor: pointer;
+    color: #4f4f4f;
+    padding-left: 0.63rem;
+}
+
+/* Button CSS Styling */
+
+.card .genereer-btn {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #5865F2;
+    font-size: 1.06rem;
+    padding: 0.94rem 0;
+    border-radius: 15px;
+    text-transform: uppercase;
+    margin: 0.94rem 0 1.3rem;
+    transition: .3s;
+}
+
+.card .genereer-btn:hover {
+    background: #4d59e2;
+    transition: .3s;
+}
